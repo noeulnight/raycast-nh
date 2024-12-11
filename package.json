@@ -1,0 +1,67 @@
+{
+  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "name": "nonghyeob-jan-aegjohoe",
+  "title": "농협 잔액조회",
+  "description": "내 계좌 잔액 조회 확장 프로그램",
+  "icon": "command-icon.png",
+  "author": "noeulnight",
+  "categories": [
+    "Finance"
+  ],
+  "license": "MIT",
+  "preferences": [
+    {
+      "title": "계좌번호",
+      "description": "농협 계좌번호를 입력하세요",
+      "type": "textfield",
+      "name": "accountNumber",
+      "required": true
+    },
+    {
+      "title": "비밀번호",
+      "description": "농협 계좌 비밀번호를 입력하세요",
+      "type": "password",
+      "name": "password",
+      "required": true
+    },
+    {
+      "title": "생년월일",
+      "description": "농협 계좌 생년월일을 입력하세요",
+      "type": "textfield",
+      "name": "birth",
+      "required": true
+    }
+  ],
+  "commands": [
+    {
+      "name": "index",
+      "title": "잔액 조회",
+      "subtitle": "농협 잔고 조회",
+      "description": "농협 계좌의 잔고를 조회합니다",
+      "mode": "menu-bar"
+    }
+  ],
+  "dependencies": {
+    "@raycast/api": "^1.76.0",
+    "@raycast/utils": "^1.4.8",
+    "axios": "^1.7.2",
+    "cheerio": "1.0.0-rc.12",
+    "date-fns": "^3.6.0"
+  },
+  "devDependencies": {
+    "@raycast/eslint-config": "^1.0.6",
+    "@types/node": "20.8.10",
+    "@types/react": "18.2.27",
+    "eslint": "^8.51.0",
+    "prettier": "^3.0.3",
+    "typescript": "^5.2.2"
+  },
+  "scripts": {
+    "build": "ray build -e dist",
+    "dev": "ray develop",
+    "fix-lint": "ray lint --fix",
+    "lint": "ray lint",
+    "prepublishOnly": "echo \"\\n\\nIt seems like you are trying to publish the Raycast extension to npm.\\n\\nIf you did intend to publish it to npm, remove the \\`prepublishOnly\\` script and rerun \\`npm publish\\` again.\\nIf you wanted to publish it to the Raycast Store instead, use \\`npm run publish\\` instead.\\n\\n\" && exit 1",
+    "publish": "npx @raycast/api@latest publish"
+  }
+}
