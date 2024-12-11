@@ -44,7 +44,7 @@
   "dependencies": {
     "@raycast/api": "^1.76.0",
     "@raycast/utils": "^1.4.8",
-    "axios": "^1.7.2",
+    "axios": "^1.7.4",
     "cheerio": "1.0.0-rc.12",
     "date-fns": "^3.6.0"
   },
